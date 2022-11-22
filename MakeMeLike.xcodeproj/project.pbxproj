@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8D70A41F2926B58F006E9330 /* MakeMeLikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A41E2926B58F006E9330 /* MakeMeLikeApp.swift */; };
-		8D70A4212926B58F006E9330 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A4202926B58F006E9330 /* ContentView.swift */; };
+		8D70A4212926B58F006E9330 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A4202926B58F006E9330 /* HomeView.swift */; };
 		8D70A4232926B58F006E9330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D70A4222926B58F006E9330 /* Assets.xcassets */; };
 		8D70A4262926B58F006E9330 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D70A4252926B58F006E9330 /* Preview Assets.xcassets */; };
+		8D70A42E2926B5D0006E9330 /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A42D2926B5D0006E9330 /* HomeViewViewModel.swift */; };
+		8D70A4302926BC79006E9330 /* DalliEImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A42F2926BC79006E9330 /* DalliEImageGenerator.swift */; };
+		8D70A4332926C592006E9330 /* ModerationPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A4322926C592006E9330 /* ModerationPassModel.swift */; };
+		8D70A4352926CC57006E9330 /* ImageGenerationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A4342926CC57006E9330 /* ImageGenerationResponseModel.swift */; };
+		8D70A4382926D6D6006E9330 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70A4372926D6D6006E9330 /* KeyChain.swift */; };
+		8DE12EF0292CB384000FE38F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE12EEF292CB384000FE38F /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D70A41B2926B58F006E9330 /* MakeMeLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeMeLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D70A41E2926B58F006E9330 /* MakeMeLikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMeLikeApp.swift; sourceTree = "<group>"; };
-		8D70A4202926B58F006E9330 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8D70A4202926B58F006E9330 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8D70A4222926B58F006E9330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D70A4252926B58F006E9330 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8D70A42D2926B5D0006E9330 /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		8D70A42F2926BC79006E9330 /* DalliEImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalliEImageGenerator.swift; sourceTree = "<group>"; };
+		8D70A4322926C592006E9330 /* ModerationPassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModerationPassModel.swift; sourceTree = "<group>"; };
+		8D70A4342926CC57006E9330 /* ImageGenerationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationResponseModel.swift; sourceTree = "<group>"; };
+		8D70A4372926D6D6006E9330 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		8DE12EEF292CB384000FE38F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				8D70A41E2926B58F006E9330 /* MakeMeLikeApp.swift */,
-				8D70A4202926B58F006E9330 /* ContentView.swift */,
+				8D70A4362926D0DF006E9330 /* Models */,
+				8D70A42C2926B5AC006E9330 /* Home */,
+				8D70A4312926BC85006E9330 /* Services */,
 				8D70A4222926B58F006E9330 /* Assets.xcassets */,
 				8D70A4242926B58F006E9330 /* Preview Content */,
 			);
@@ -65,6 +79,34 @@
 				8D70A4252926B58F006E9330 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D70A42C2926B5AC006E9330 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8D70A4202926B58F006E9330 /* HomeView.swift */,
+				8D70A42D2926B5D0006E9330 /* HomeViewViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8D70A4312926BC85006E9330 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D70A42F2926BC79006E9330 /* DalliEImageGenerator.swift */,
+				8DE12EEF292CB384000FE38F /* DataManager.swift */,
+				8D70A4372926D6D6006E9330 /* KeyChain.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D70A4362926D0DF006E9330 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D70A4322926C592006E9330 /* ModerationPassModel.swift */,
+				8D70A4342926CC57006E9330 /* ImageGenerationResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D70A4212926B58F006E9330 /* ContentView.swift in Sources */,
+				8D70A4212926B58F006E9330 /* HomeView.swift in Sources */,
+				8DE12EF0292CB384000FE38F /* DataManager.swift in Sources */,
+				8D70A42E2926B5D0006E9330 /* HomeViewViewModel.swift in Sources */,
+				8D70A4352926CC57006E9330 /* ImageGenerationResponseModel.swift in Sources */,
+				8D70A4302926BC79006E9330 /* DalliEImageGenerator.swift in Sources */,
+				8D70A4382926D6D6006E9330 /* KeyChain.swift in Sources */,
 				8D70A41F2926B58F006E9330 /* MakeMeLikeApp.swift in Sources */,
+				8D70A4332926C592006E9330 /* ModerationPassModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
