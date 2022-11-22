@@ -38,6 +38,7 @@ class DalliEImageGenerator {
         
         
         let (response, _) = try await URLSession.shared.data(for: request)
+        print("\(String(decoding: response, as: UTF8.self))")
         let result = try JSONDecoder().decode(ModerationPassModel.self, from: response)
         print("\(String(decoding: response, as: UTF8.self))")
         return result.hasIssues == false
@@ -74,8 +75,15 @@ class DalliEImageGenerator {
         
 
         let (response, _) = try await URLSession.shared.data(for: request)
+        print("response ok")
+        print("\(String(decoding: response, as: UTF8.self)) mk2")
         return try JSONDecoder().decode(ImageGenerationResponseModel.self, from: response)
-
+//        let result = try JSONDecoder().decode(ImageGenerationResponseModel.self, from: response)
+//        print(result)
+//        #error("Here some fukin error")
+//        print("result is ok")
+//        print(result.data.first ?? "no first")
+//        return result
     }
     
 }

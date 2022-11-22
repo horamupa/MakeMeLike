@@ -47,6 +47,13 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .foregroundStyle(RadialGradient(gradient: Gradient(colors: [Color(uiColor: #colorLiteral(red: 1, green: 0.1857388616, blue: 0.5733950138, alpha: 1)),Color(uiColor: #colorLiteral(red: 0.8446564078, green: 0.5145705342, blue: 1, alpha: 1))]), center: .center, startRadius: 20, endRadius: 340))
                         .padding(.top, 10)
+                        .overlay {
+                            if vm.isLoading {
+                                Text("Loading...")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                            }
+                        }
                 }
             }
             .padding()

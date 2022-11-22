@@ -18,6 +18,7 @@ class HomeViewViewModel: ObservableObject {
     
     func generateImage() {
         //        guard requestFieldText != ""
+        isLoading.toggle()
         Task {
             do {
                let response = try await DalliEImageGenerator.shared.generateImage(wishText: requestFieldText, key: KeyChain.shared.apiKey)
@@ -26,7 +27,6 @@ class HomeViewViewModel: ObservableObject {
                     let (data, _) = try await URLSession.shared.data(from: url)
                     image = UIImage(data: data)
 //                    #warning("connect loading state to UI")
-                    isLoading.toggle()
                 } else { print("Can't get an image")}
             } catch let error {
                 
